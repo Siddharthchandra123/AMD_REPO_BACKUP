@@ -1,0 +1,4 @@
+*.onnx
+*.mp4
+services/tts/models/
+docs/assets/demo.mp4
