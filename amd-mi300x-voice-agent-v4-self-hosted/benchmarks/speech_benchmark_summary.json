@@ -1,0 +1,31 @@
+{
+  "asr": {
+    "requests": 3,
+    "successful": 3,
+    "success_rate_percent": 100.0,
+    "mean_latency_seconds": 28.8342,
+    "median_latency_seconds": 28.8169,
+    "min_latency_seconds": 28.8114,
+    "max_latency_seconds": 28.8742,
+    "mean_wer_percent": 0.0
+  },
+  "tts": {
+    "requests": 3,
+    "successful": 3,
+    "success_rate_percent": 100.0,
+    "mean_latency_seconds": 1.6398,
+    "median_latency_seconds": 1.6307,
+    "min_latency_seconds": 1.6132,
+    "max_latency_seconds": 1.6755,
+    "mean_rtf": 0.1804
+  },
+  "e2e": {
+    "requests": 3,
+    "successful": 3,
+    "success_rate_percent": 100.0,
+    "mean_latency_seconds": 32.5907,
+    "median_latency_seconds": 32.506,
+    "min_latency_seconds": 32.4552,
+    "max_latency_seconds": 32.8109
+  }
+}

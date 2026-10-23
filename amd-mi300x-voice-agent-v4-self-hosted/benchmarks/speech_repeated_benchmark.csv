@@ -1,0 +1,10 @@
+timestamp_utc,component,latency_seconds,input_audio_seconds,output_audio_seconds,rtf,wer_percent,http_status,success,error,transcript
+2026-10-23T17:46:53.122628+00:00,asr,28.8114,9.088,,3.1703,0.0,200,True,,"Hello, this is an AMD MI300X voice assistant benchmark. We are testing speech synthesis and automatic speech recognition."
+2026-10-23T17:47:21.940414+00:00,asr,28.8169,9.088,,3.1709,0.0,200,True,,"Hello, this is an AMD MI300X voice assistant benchmark. We are testing speech synthesis and automatic speech recognition."
+2026-10-23T17:47:50.815527+00:00,asr,28.8742,9.088,,3.1772,0.0,200,True,,"Hello, this is an AMD MI300X voice assistant benchmark. We are testing speech synthesis and automatic speech recognition."
+2026-10-23T17:47:52.494836+00:00,tts,1.6755,,9.088,0.1844,,200,True,,
+2026-10-23T17:47:54.128148+00:00,tts,1.6307,,9.088,0.1794,,200,True,,
+2026-10-23T17:47:55.743904+00:00,tts,1.6132,,9.088,0.1775,,200,True,,
+2026-10-23T17:48:28.206420+00:00,e2e,32.4552,9.088,19.1147,,0.0,200,True,,"Hello, this is an AMD MI300X voice assistant benchmark. We are testing speech synthesis and automatic speech recognition."
+2026-10-23T17:49:00.720550+00:00,e2e,32.506,9.088,18.9653,,0.0,200,True,,"Hello, this is an AMD MI300X voice assistant benchmark. We are testing speech synthesis and automatic speech recognition."
+2026-10-23T17:49:33.539408+00:00,e2e,32.8109,9.088,21.568,,0.0,200,True,,"Hello, this is an AMD MI300X voice assistant benchmark. We are testing speech synthesis and automatic speech recognition."

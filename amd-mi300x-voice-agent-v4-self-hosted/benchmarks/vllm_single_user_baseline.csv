@@ -1,0 +1,6 @@
+request,ttft_seconds,latency_seconds,completion_tokens,output_tokens_per_second,output_characters
+1,0.0165,0.3513,128,382.32,694
+2,0.0146,0.3496,128,382.13,694
+3,0.0145,0.3492,128,382.42,694
+4,0.0135,0.3485,128,382.12,694
+5,0.0138,0.3489,128,381.96,694

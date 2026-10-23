@@ -1,0 +1,6 @@
+request,success,ttft_s,latency_s,completion_tokens,tokens_per_second,error
+1,True,0.0279,0.5296,128,255.15,
+2,True,0.0287,0.5323,128,254.17,
+3,True,0.028,0.5317,128,254.11,
+4,True,0.0274,0.5312,128,254.06,
+5,True,0.0268,0.5307,128,254.03,
