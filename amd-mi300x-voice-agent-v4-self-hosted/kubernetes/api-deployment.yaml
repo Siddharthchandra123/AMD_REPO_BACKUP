@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: amd-voice-agent-api}
+spec:
+  replicas: 2
+  selector: {matchLabels: {app: amd-voice-agent-api}}
+  template:
+    metadata: {labels: {app: amd-voice-agent-api}}
+    spec:
+      containers:
+      - name: api
+        image: amd-voice-agent-api:latest
+        ports: [{containerPort: 8000}]
+        readinessProbe: {httpGet: {path: /ready, port: 8000}}
+        livenessProbe: {httpGet: {path: /health, port: 8000}}

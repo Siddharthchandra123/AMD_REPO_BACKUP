@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>AMD MI300X Voice Agent</title>
+    <style>
+        body {
+            font-family: system-ui;
+            max-width: 850px;
+            margin: 40px auto;
+            background: #111;
+            color: #eee
+        }
+
+        button {
+            padding: 12px 18px;
+            margin: 5px
+        }
+
+        #answer,
+        #transcript {
+            padding: 14px;
+            background: #1d1d1d;
+            border-radius: 8px;
+            min-height: 30px
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🎙 AMD MI300X Real-Time Voice Agent</h1>
+    <button id="start">Start talking</button><button id="stop" disabled>Stop</button>
+    <button id="interrupt">Interrupt</button>
+    <p id="status">Connecting...</p>
+    <h3>You said</h3>
+    <div id="transcript"></div>
+    <h3>Agent</h3>
+    <div id="answer"></div>
+    <script>
+        const sid = crypto.randomUUID(); const ws = new WebSocket(`ws://${location.hostname}:8000/ws/realtime/${sid}`);
+        let recorder, chunks = [];
+        ws.onopen = () => status.textContent = "Ready";
+        ws.onmessage = async e => {
+            const d = JSON.parse(e.data);
+            if (d.type === "token") answer.textContent += d.text;
+            if (d.type === "audio" && d.audio_base64) { const a = new Audio("data:audio/wav;base64," + d.audio_base64); a.play().catch(() => { }); }
+            if (d.type === "done") status.textContent = "Ready";
+        };
+        start.onclick = async () => {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            recorder = new MediaRecorder(stream); chunks = []; recorder.ondataavailable = e => chunks.push(e.data);
+            recorder.onstop = async () => {
+                const fd = new FormData(); fd.append("file", new Blob(chunks, { type: "audio/webm" }), "voice.webm");
+                status.textContent = "Transcribing...";
+                const r = await fetch(`http://${location.hostname}:8000/voice`, { method: "POST", body: fd }); const d = await r.json();
+                transcript.textContent = d.transcript; answer.textContent = d.answer; status.textContent = "Ready";
+            };
+            recorder.start(); status.textContent = "Listening..."; start.disabled = true; stop.disabled = false;
+        };
+        stop.onclick = () => { recorder.stop(); start.disabled = false; stop.disabled = true };
+        interrupt.onclick = () => ws.send(JSON.stringify({ type: "interrupt" }));
+    </script>
+</body>
+
+</html>
