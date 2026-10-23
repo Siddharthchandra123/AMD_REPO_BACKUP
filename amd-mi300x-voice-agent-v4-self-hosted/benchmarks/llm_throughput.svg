@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="390" viewBox="0 0 820 390">
+<rect width="100%" height="100%" fill="white"/>
+<text x="410" y="25" text-anchor="middle" font-size="20" font-family="Arial" font-weight="bold">MI300X vLLM Aggregate Output Throughput</text>
+<line x1="85" y1="325.0" x2="785" y2="325.0" stroke="#dddddd"/>
+<text x="73" y="330.0" text-anchor="end" font-size="13" font-family="Arial">0</text>
+<line x1="85" y1="255.0" x2="785" y2="255.0" stroke="#dddddd"/>
+<text x="73" y="260.0" text-anchor="end" font-size="13" font-family="Arial">2,500</text>
+<line x1="85" y1="185.0" x2="785" y2="185.0" stroke="#dddddd"/>
+<text x="73" y="190.0" text-anchor="end" font-size="13" font-family="Arial">5,000</text>
+<line x1="85" y1="115.0" x2="785" y2="115.0" stroke="#dddddd"/>
+<text x="73" y="120.0" text-anchor="end" font-size="13" font-family="Arial">7,500</text>
+<line x1="85" y1="45.0" x2="785" y2="45.0" stroke="#dddddd"/>
+<text x="73" y="50.0" text-anchor="end" font-size="13" font-family="Arial">10,000</text>
+<text x="155.0" y="353" text-anchor="middle" font-size="13" font-family="Arial">5</text>
+<text x="225.0" y="353" text-anchor="middle" font-size="13" font-family="Arial">10</text>
+<text x="435.0" y="353" text-anchor="middle" font-size="13" font-family="Arial">25</text>
+<text x="785.0" y="353" text-anchor="middle" font-size="13" font-family="Arial">50</text>
+<path d="M 155.0,291.5 L 225.0,255.4 L 435.0,179.7 L 785.0,73.2" fill="none" stroke="#1870b9" stroke-width="3"/>
+<circle cx="155.0" cy="291.4546" r="6" fill="#1870b9"/>
+<text x="155.0" y="277.4546" text-anchor="middle" font-size="13" font-family="Arial">1,198</text>
+<circle cx="225.0" cy="255.43063999999998" r="6" fill="#1870b9"/>
+<text x="225.0" y="241.43063999999998" text-anchor="middle" font-size="13" font-family="Arial">2,485</text>
+<circle cx="435.0" cy="179.68756000000002" r="6" fill="#1870b9"/>
+<text x="435.0" y="165.68756000000002" text-anchor="middle" font-size="13" font-family="Arial">5,190</text>
+<circle cx="785.0" cy="73.20439999999996" r="6" fill="#1870b9"/>
+<text x="785.0" y="59.204399999999964" text-anchor="middle" font-size="13" font-family="Arial">8,993</text>
+<text x="410" y="377" text-anchor="middle" font-size="14" font-family="Arial">Concurrent requests</text>
+<text x="18" y="200" text-anchor="middle" transform="rotate(-90 18 200)" font-size="14" font-family="Arial">Aggregate output tokens/sec</text>
+</svg>

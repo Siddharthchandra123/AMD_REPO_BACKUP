@@ -1,0 +1,101 @@
+{
+  "project": "AMD MI300X Self-Hosted Voice AI Agent",
+  "report_generated_utc": "2026-10-23T18:05:51.408011+00:00",
+  "hardware": "AMD Instinct MI300X",
+  "llm_model": "Qwen/Qwen2.5-3B-Instruct",
+  "asr": "OpenAI Whisper Small (CPU)",
+  "tts": "Kokoro ONNX",
+  "llm": [
+    {
+      "concurrency": 1,
+      "requests": 5,
+      "successful": 5,
+      "mean_ttft_ms": 14.58,
+      "mean_latency_ms": 349.5,
+      "aggregate_output_tokens_per_second": null
+    },
+    {
+      "concurrency": 5,
+      "requests": 5,
+      "successful": 5,
+      "mean_ttft_ms": 27.76,
+      "mean_latency_ms": 531.1,
+      "aggregate_output_tokens_per_second": 1198.05
+    },
+    {
+      "concurrency": 10,
+      "requests": 10,
+      "successful": 10,
+      "mean_ttft_ms": 41.38999999999999,
+      "mean_latency_ms": 509.2099999999999,
+      "aggregate_output_tokens_per_second": 2484.62
+    },
+    {
+      "concurrency": 25,
+      "requests": 25,
+      "successful": 25,
+      "mean_ttft_ms": 77.2976904800089,
+      "mean_latency_ms": 606.52283532002,
+      "aggregate_output_tokens_per_second": 5189.73
+    },
+    {
+      "concurrency": 50,
+      "requests": 50,
+      "successful": 50,
+      "mean_ttft_ms": 104.34813715999098,
+      "mean_latency_ms": 690.0837425000009,
+      "aggregate_output_tokens_per_second": 8992.7
+    }
+  ],
+  "speech": {
+    "asr": {
+      "requests": 3,
+      "successful": 3,
+      "mean_latency_seconds": 28.834166666666665,
+      "median_latency_seconds": 28.8169,
+      "min_latency_seconds": 28.8114,
+      "max_latency_seconds": 28.8742,
+      "mean_rtf": 3.1728,
+      "mean_wer_percent": 0.0
+    },
+    "tts": {
+      "requests": 3,
+      "successful": 3,
+      "mean_latency_seconds": 1.6398,
+      "median_latency_seconds": 1.6307,
+      "min_latency_seconds": 1.6132,
+      "max_latency_seconds": 1.6755,
+      "mean_rtf": 0.18043333333333333,
+      "mean_wer_percent": null
+    },
+    "e2e": {
+      "requests": 3,
+      "successful": 3,
+      "mean_latency_seconds": 32.5907,
+      "median_latency_seconds": 32.506,
+      "min_latency_seconds": 32.4552,
+      "max_latency_seconds": 32.8109,
+      "mean_rtf": null,
+      "mean_wer_percent": 0.0
+    }
+  },
+  "initial_e2e": [
+    {
+      "timestamp_utc": "2026-10-23T17:43:06.469758+00:00",
+      "benchmark": "voice_end_to_end",
+      "input_audio_seconds": "9.088",
+      "request_latency_seconds": "32.4416",
+      "http_status": "200",
+      "success": "True",
+      "output_audio_seconds": "21.803",
+      "error": ""
+    }
+  ],
+  "notes": [
+    "LLM throughput values are previously recorded run summaries.",
+    "LLM request-level CSVs do not contain batch wall-clock duration.",
+    "Speech trials used the same 9.088-second synthetic audio.",
+    "Whisper ROCm GPU acceleration is future scope.",
+    "These short benchmarks do not establish sustained-load capacity."
+  ]
+}
