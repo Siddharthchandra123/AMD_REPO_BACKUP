@@ -14,6 +14,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY main.py .
 COPY models/ /app/models/
+COPY fetch_models.py /app/fetch_models.py
+RUN python /app/fetch_models.py
 
 EXPOSE 9001
 

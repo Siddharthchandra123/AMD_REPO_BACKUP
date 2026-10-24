@@ -12,6 +12,13 @@
 
 </div>
 
+> **One-command stack startup:** From the project root, run
+> `docker compose --profile gpu up -d --build main`. This starts the six
+> application services and the `main` readiness monitor together.
+> See [MAIN_SERVICE.md](MAIN_SERVICE.md) for setup, logs, and troubleshooting.
+
+
+
 > **Project status — functional MVP / production hardening in progress.** The application has a working self-hosted voice-chat stack. It is **not** represented as security-certified, highly available, independently benchmarked, or ready for unrestricted public exposure. This distinction is intentional.
 
 ## Table of contents
